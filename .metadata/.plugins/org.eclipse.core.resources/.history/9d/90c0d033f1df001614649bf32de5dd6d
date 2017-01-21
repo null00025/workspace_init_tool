@@ -1,0 +1,20 @@
+package panel.menu;
+
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Font;
+
+public class PanelMenu extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public PanelMenu() {
+
+		JLabel lblTitle = new JLabel("title");
+		lblTitle.setFont(new Font("MS UI Gothic", Font.PLAIN, 24));
+		add(lblTitle);
+
+	}
+
+}

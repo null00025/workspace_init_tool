@@ -1,0 +1,51 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import panel.menu.PanelCenter;
+import panel.menu.PanelNorth;
+
+
+public class FrameMain extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					FrameMain frame = new FrameMain();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public FrameMain() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+
+		// add panel
+		PanelNorth panelNorth = new PanelNorth();
+		contentPane.add(panelNorth, BorderLayout.NORTH);
+
+		PanelCenter panelCenter = new PanelCenter();
+		contentPane.add(panelCenter, BorderLayout.CENTER);
+	}
+
+}

@@ -1,0 +1,29 @@
+package panel.menu;
+
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JRadioButton;
+import javax.swing.JRadioButtonMenuItem;
+
+public class PanelCenter extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public PanelCenter() {
+
+		JRadioButtonMenuItem rdbtnmntmNewRadioItem = new JRadioButtonMenuItem("New radio item");
+		add(rdbtnmntmNewRadioItem);
+		JRadioButton radioBtn1 = new JRadioButton("Javaインストール");
+		rdbtnmntmNewRadioItem.add(radioBtn1);
+		JRadioButton radioBtn2 = new JRadioButton("Eclipseインストール");
+		rdbtnmntmNewRadioItem.add(radioBtn2);
+
+
+//		JRadioButton rdbtnNewRadioButton = new JRadioButton("New radio button");
+//		add(rdbtnNewRadioButton);
+
+	}
+
+}
